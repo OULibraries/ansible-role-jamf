@@ -1,0 +1,9 @@
+---
+- name: Get and Extract Jamf Installer
+  unarchive: 
+    src: "http://ci.jamfcloud.com/GM/jamf-pro-installer-linux-10.6.0.zip?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHA6Ly9jaS5qYW1mY2xvdWQuY29tL0dNL2phbWYtcHJvLWluc3RhbGxlci1saW51eC0xMC42LjAuemlwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTM0MTA1MzE4fSwiSXBBZGRyZXNzIjp7IkFXUzpTb3VyY2VJcCI6IjAuMC4wLjAvMCJ9fX1dfQ__&Signature=HfG~1ai3impz1VEiwT~zTdxXkzfWNoD8~2g~58Y-4rnoFEeZGKRg2XLtd7RZDExu~QiVFmL69Wx8CsaSwNft9bQLSVokTzmfL7YTXKo97oXvUTaT0skI3cMhA8yo42tqGtiwwh0g-PhMkK-Aj9cmV1QGpk6GqiW5NrigyO~iY-w98sHxKQBPNp7jor8-qpmKh9Yk-4eqeFBer6YJXwwTA6qxXrbdn~wiYD-yZxjXZArXSRlSvMwOqFjyyqB0bm9079Y5bWDPzv0ENQQcTZfjqq2XGP0jAuulnizU1II174kh19bnByLpDHJvtWM3wKBUADN888-T9QH8y25VKl40vQ__&Key-Pair-Id=APKAI3VVZUTVIAFNZ7BQ"
+    dest: "/tmp/"
+    remote_src: yes
+
+- name: Run Installer
+  script: /tmp/jamfproinstaller.run -y 
