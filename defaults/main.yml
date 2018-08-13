@@ -2,3 +2,4 @@
 # defaults file for ansible-role-jamf
 mariadb_jamf_user: "jamfsoftware"
 mariadb_jamf_pass: "Jamfsw03!"
+mariadb_jamf_database: "jamfsoftware"
