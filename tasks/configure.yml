@@ -1,7 +1,7 @@
 ---
 
 - name: Add Jamf User
-   mysql_user:
+  mysql_user:
     name: "{{ mariadb_jamf_user }}"
     password: "{{ mariadb_jamf_pass }}"
     host_all: true
